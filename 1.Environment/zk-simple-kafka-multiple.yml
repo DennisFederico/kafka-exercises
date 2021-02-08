@@ -116,6 +116,12 @@
         CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
       volumes:
         - ./host-volume/connectors:/home/appuser/connectors
+        - ./host-volume/datasetsPrincipals:/home/appuser/datasetsPrincipals
+        - ./host-volume/datasetsNames:/home/appuser/datasetsNames
+        - ./host-volume/datasetsTitle:/home/appuser/datasetsTitle
+        - ./host-volume/datasetsRatings:/home/appuser/datasetsRatings
+        - ./host-volume/errors:/home/appuser/errors
+        - ./host-volume/finished:/home/appuser/finished
 
     ksqldb-server:
       image: confluentinc/cp-ksqldb-server:6.0.1
@@ -242,7 +248,6 @@
 
   networks:
     localnet:
-      attachable: true
 
   volumes:
     rs1:

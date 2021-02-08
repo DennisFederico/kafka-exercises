@@ -1,0 +1,15 @@
+{
+  "name": "TsvSpoolDir-principals",
+  "config": {
+    "connector.class":"com.github.jcustenborder.kafka.connect.spooldir.SpoolDirCsvSourceConnector",
+    "input.path":"/home/appuser/datasetsPrincipals",
+    "input.file.pattern":"title.principals.*",
+    "error.path":"/home/appuser/errors",
+    "finished.path":"/home/appuser/finished",
+    "halt.on.error":"false",
+    "topic":"topic-principals",
+    "schema.generation.enabled":"true",
+    "csv.first.row.as.header":"true",
+    "csv.separator.char": 9
+  }
+}
