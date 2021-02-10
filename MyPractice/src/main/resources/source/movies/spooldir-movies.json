@@ -2,14 +2,15 @@
   "name": "TsvSpoolDir-movies",
   "config": {
     "connector.class":"com.github.jcustenborder.kafka.connect.spooldir.SpoolDirCsvSourceConnector",
-    "input.path":"/home/appuser/datasetsTitle",
-    "input.file.pattern":"title.basics.*",
+    "input.path":"/home/appuser/datasets",
+    "input.file.pattern":"movies.*",
     "error.path":"/home/appuser/errors",
     "finished.path":"/home/appuser/finished",
     "halt.on.error":"false",
     "topic":"topic-movies",
     "schema.generation.enabled":"true",
     "csv.first.row.as.header":"true",
+    "value.converter.schemas.enable":"false",
     "csv.separator.char": 9
   }
 }

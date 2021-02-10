@@ -2,7 +2,7 @@
   "name": "TsvSpoolDir-ratings",
   "config": {
     "connector.class":"com.github.jcustenborder.kafka.connect.spooldir.SpoolDirCsvSourceConnector",
-    "input.path":"/home/appuser/datasetsRatings",
+    "input.path":"/home/appuser/datasets",
     "input.file.pattern":"title.ratings.tsv",
     "error.path":"/home/appuser/errors",
     "finished.path":"/home/appuser/finished",
@@ -10,6 +10,7 @@
     "topic":"topic-ratings",
     "schema.generation.enabled":"true",
     "csv.first.row.as.header":"true",
+    "value.converter.schemas.enable":"false",
     "csv.separator.char": 9
   }
 }
